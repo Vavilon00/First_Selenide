@@ -1,0 +1,11 @@
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+
+
+
+/.idea
+*.class
+*.log
+
