@@ -6,6 +6,9 @@
 
 
 /.idea
+.allure/
 *.class
 *.log
+*.properties
+
 
