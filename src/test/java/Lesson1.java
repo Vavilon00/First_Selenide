@@ -29,7 +29,7 @@ public class Lesson1 {
     @DisplayName("неуспешный тест")
     @Test
     void unsuccessfulSearchTest() {
-        SelenideLogger.addListener("allure",new AllureSelenide());
+ //       SelenideLogger.addListener("allure",new AllureSelenide());
         Configuration.holdBrowserOpen=true;
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
