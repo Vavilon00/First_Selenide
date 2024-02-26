@@ -21,7 +21,7 @@ public class Lesson1 {
     }
 
 
-    @Tag("UI")
+
     @DisplayName("неуспешный тест")
     @Test
     void unsuccessfulSearchTest() {

@@ -27,14 +27,16 @@ repositories {
 }
 
 dependencies {
-
-
-
     testImplementation(
             "com.codeborne:selenide:6.17.1",
             "org.junit.jupiter:junit-jupiter:5.9.3",
             "io.qameta.allure:allure-junit5:2.24.0",
             "io.qameta.allure:allure-selenide:2.20.1")
+}
+def uiTest = tasks.register("uiTests", Test) {
+    useJUnitPlatform {
+        includeTags "UI"
+    }
 }
 
 tasks.withType(JavaCompile) {
