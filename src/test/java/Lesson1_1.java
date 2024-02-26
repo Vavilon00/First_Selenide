@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class Lesson1_1 {
     @Test
     void successfulSearchTest() {
+        Configuration.headless =true;
         Configuration.holdBrowserOpen=true;
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
