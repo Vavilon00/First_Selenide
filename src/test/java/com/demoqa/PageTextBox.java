@@ -2,6 +2,7 @@ package com.demoqa;
 
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.commands.FindByXpath;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -16,29 +17,29 @@ public class PageTextBox {
     private final SelenideElement submitButton = $x("//div/button[contains(.,'Submit')]");
     private final String url="https://demoqa.com/text-box";
 
-    @Step
+    @Step ("Открыли https://demoqa.com/text-box")
     public void openPage(){
         open(url);
     }
 
-    @Step
+    @Step ("Заполнили FullName")
     public void setFullName(String fullName) {
         this.fullName.setValue(fullName);
     }
 
-    @Step
+    @Step ("Заполнили Email")
     public void setEmail(String email) {
         this.email.toWebElement().sendKeys(email);
     }
-    @Step
+    @Step ("Заполнили CurrentAddress")
     public void setCurrentAddress(String currentAddress) {
         this.currentAddress.toWebElement().sendKeys(currentAddress);
     }
-    @Step
+    @Step ("Заполнили PermanentAddress")
     public void setPermanentAddress(String permanentAddress) {
         this.permanentAddress.toWebElement().sendKeys(permanentAddress);
     }
-    @Step
+    @Step ("Нажали submit")
     public void submit(){
         submitButton.click();
     }
