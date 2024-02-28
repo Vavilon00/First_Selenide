@@ -15,13 +15,13 @@ public class PageTextBoxTest {
     @BeforeAll
     public static void setUp(){
         Configuration.headless = true;
+        Configuration.pageLoadTimeout=60000;
         SelenideLogger.addListener("allure",new AllureSelenide());
     }
     @Test
     void successfulTest()  {
-        Configuration.pageLoadTimeout=60000;
-        Configuration.holdBrowserOpen=true;
-        Configuration.browserSize = "1920x1080";
+//        Configuration.holdBrowserOpen=true;
+//        Configuration.browserSize = "1920x1080";
 
         PageTextBox pageTextBox = new PageTextBox();
         pageTextBox.openPage();

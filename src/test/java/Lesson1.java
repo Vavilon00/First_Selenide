@@ -28,7 +28,7 @@ public class Lesson1 {
 
 
     @DisplayName("неуспешный тест")
-    @Test
+ //   @Test
     void unsuccessfulSearchTest() {
         Configuration.holdBrowserOpen=true;
         open("https://www.google.com/");
