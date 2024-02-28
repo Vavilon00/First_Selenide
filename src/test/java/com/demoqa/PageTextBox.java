@@ -2,7 +2,6 @@ package com.demoqa;
 
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.commands.FindByXpath;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -41,7 +40,7 @@ public class PageTextBox {
     }
     @Step ("Нажали submit")
     public void submit(){
-        submitButton.click();
+        submitButton.scrollTo().click();
     }
 
 }
