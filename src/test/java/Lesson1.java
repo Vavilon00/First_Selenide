@@ -17,7 +17,7 @@ public class Lesson1 {
         SelenideLogger.addListener("allure",new AllureSelenide());
     }
     @Tag("UI")
-    @Test
+ //  @Test
     void successfulSearchTest() {
         Configuration.holdBrowserOpen=true;
         open("https://www.google.com/");

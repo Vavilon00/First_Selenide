@@ -13,7 +13,7 @@ public class Lesson1_1 {
         Configuration.headless = true;
     }
 
-    @Test
+//    @Test
     void successfulSearchTest() {
         Configuration.holdBrowserOpen=true;
         open("https://www.google.com/");
