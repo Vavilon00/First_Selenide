@@ -1,4 +1,4 @@
-package com.demoqa;
+package com.demoqa.TextBox;
 
 
 import com.codeborne.selenide.SelenideElement;
@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class PageTextBox {
+ class PageTextBox {
     private final SelenideElement fullName = $x("//div/input[@placeholder='Full Name']");
     private final SelenideElement email = $x("//div/input[@placeholder='name@example.com']");
     private final SelenideElement currentAddress = $x("//div/textarea[@placeholder='Current Address']");
@@ -17,30 +17,36 @@ public class PageTextBox {
     private final String url="https://demoqa.com/text-box";
 
     @Step ("Открыли https://demoqa.com/text-box")
-    public void openPage(){
+     PageTextBox openPage(){
         open(url);
+        return this;
     }
 
     @Step ("Заполнили FullName")
-    public void setFullName(String fullName) {
+     PageTextBox setFullName(String fullName) {
         this.fullName.setValue(fullName);
+        return this;
     }
 
     @Step ("Заполнили Email")
-    public void setEmail(String email) {
+     PageTextBox setEmail(String email) {
         this.email.toWebElement().sendKeys(email);
+        return this;
     }
     @Step ("Заполнили CurrentAddress")
-    public void setCurrentAddress(String currentAddress) {
+     PageTextBox setCurrentAddress(String currentAddress) {
         this.currentAddress.toWebElement().sendKeys(currentAddress);
+        return this;
     }
     @Step ("Заполнили PermanentAddress")
-    public void setPermanentAddress(String permanentAddress) {
+     PageTextBox setPermanentAddress(String permanentAddress) {
         this.permanentAddress.toWebElement().sendKeys(permanentAddress);
+        return this;
     }
     @Step ("Нажали submit")
-    public void submit(){
+     PageTextBox submit(){
         submitButton.scrollTo().click();
+        return this;
     }
 
 }

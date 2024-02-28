@@ -20,6 +20,7 @@ public class Lesson1 {
  //  @Test
     void successfulSearchTest() {
         Configuration.holdBrowserOpen=true;
+
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("https://selenide.org"));
