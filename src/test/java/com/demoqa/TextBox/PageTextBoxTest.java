@@ -26,7 +26,7 @@ public class PageTextBoxTest {
 
         pageTextBox
                 .openPage()
-                .setFullName("Test TriggerJenkins")
+                .setFullName("TriggerJenkins")
                 .setEmail("email@email.com")
                 .setCurrentAddress("setCurrentAddress")
                 .setPermanentAddress("setPermanentAddress")
